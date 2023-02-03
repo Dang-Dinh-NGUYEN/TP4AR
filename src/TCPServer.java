@@ -40,6 +40,8 @@ public class TCPServer {
                     str2 = br.readLine();
                     dout.writeUTF(str2);
                     dout.flush();
+                    dout.close();
+                    socket.close();
                 }
             }catch(IOException e){e.printStackTrace();}
         }
